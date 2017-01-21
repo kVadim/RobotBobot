@@ -1,0 +1,14 @@
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\bin\Debug\RobotBobot.exe.config
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\bin\Debug\RobotBobot.exe
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\bin\Debug\RobotBobot.pdb
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\obj\Debug\RobotBobot.csprojResolveAssemblyReference.cache
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\obj\Debug\RobotBobot.Form1.resources
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\obj\Debug\RobotBobot.Properties.Resources.resources
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\obj\Debug\RobotBobot.csproj.GenerateResource.Cache
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\obj\Debug\RobotBobot.exe
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\obj\Debug\RobotBobot.pdb
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\bin\Debug\Newtonsoft.Json.dll
+c:\users\sg\documents\visual studio 2013\Projects\RobotBobot\RobotBobot\bin\Debug\Newtonsoft.Json.xml
+D:\RobotBobot\RobotBobot\bin\Debug\RobotBobot.exe.config
+D:\RobotBobot\RobotBobot\obj\Debug\RobotBobot.exe
+D:\RobotBobot\RobotBobot\obj\Debug\RobotBobot.pdb
