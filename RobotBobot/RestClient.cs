@@ -31,15 +31,14 @@ namespace RobotBobot
                 output.Append(reader.ReadToEnd());
 
                 string data = output.ToString();
-               // Logger.Log.Info(data);
+                Logger.Log.Info(data);
 
                 RootObject rootObject = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(data);
                 double asks = rootObject.asks.Average(innerList => innerList[0]);
                 double bids = rootObject.bids.Average(innerList => innerList[0]);
                 Logger.Log.Info("Avarage asks- "+asks);
-               // Logger.Log.Info("Avarage bids- "+bids);
+                Logger.Log.Info("Avarage bids- "+bids);
 
-                //Thread.Sleep(500);
             }         
         }
 

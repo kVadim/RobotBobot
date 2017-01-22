@@ -25,26 +25,27 @@ namespace RobotBobot
 
         private void button_RUN_Click(object sender, EventArgs e)
         {
+            button_STOP.Enabled = true;
+            button_RUN.Enabled = false;
             if (backgroundWorker1.IsBusy != true)
             {
                 backgroundWorker1.RunWorkerAsync();
             }
-            button_STOP.Enabled = true;
-            button_RUN.Enabled = false;
         }
 
         private void button_STOP_Click(object sender, EventArgs e)
         {
-            
+            button_RUN.Enabled = true;
+            button_STOP.Enabled = false;
             if (backgroundWorker1.WorkerSupportsCancellation == true)
             {
                 backgroundWorker1.CancelAsync();
             }
-            button_RUN.Enabled = true;
-            button_STOP.Enabled = false;
+           
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+
+        private void backgroundWorker1_DoWork_1(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker worker = sender as BackgroundWorker;
 
@@ -58,20 +59,13 @@ namespace RobotBobot
                 else
                 {
                     RestClient.GetData();
-                    Thread.Sleep(500);
-                    //worker.ReportProgress(i * 10);
+                    Thread.Sleep(300);
+                    //  worker.ReportProgress(10);
                 }
             }
         }
 
-        // This event handler updates the progress.
-        //private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        //{
-        //    resultLabel.Text = (e.ProgressPercentage.ToString() + "%");
-        //}
-
-        // This event handler deals with the results of the background operation.
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void backgroundWorker1_RunWorkerCompleted_1(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Cancelled == true)
             {
@@ -85,6 +79,11 @@ namespace RobotBobot
             {
                 //resultLabel.Text = "Done!";
             }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+
         }
     }
 }
