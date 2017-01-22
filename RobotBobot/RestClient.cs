@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace RobotBobot
@@ -12,26 +13,33 @@ namespace RobotBobot
     {
         public static void GetData()
         {
-            for (int i =0; i<20; i++)
+            HttpWebRequest request;
+            HttpWebResponse response;
+            StreamReader reader;
+            StringBuilder output;
+
+            for (int i =0; i<10; i++)
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://data.btcchina.com/data/orderbook?limit=10");
+                request = (HttpWebRequest)WebRequest.Create("https://data.btcchina.com/data/orderbook?limit=10");
                 request.Method = "GET";
                 request.Accept = "application/json";
                 request.KeepAlive = false;
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                response = (HttpWebResponse)request.GetResponse();
 
-                StreamReader reader = new StreamReader(response.GetResponseStream());
-                StringBuilder output = new StringBuilder();
+                reader = new StreamReader(response.GetResponseStream());
+                output = new StringBuilder();
                 output.Append(reader.ReadToEnd());
 
                 string data = output.ToString();
-                Console.WriteLine(data);
+               // Logger.Log.Info(data);
 
                 RootObject rootObject = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(data);
                 double asks = rootObject.asks.Average(innerList => innerList[0]);
-                Console.WriteLine(asks);
                 double bids = rootObject.bids.Average(innerList => innerList[0]);
-                Console.WriteLine(bids);
+                Logger.Log.Info("Avarage asks- "+asks);
+               // Logger.Log.Info("Avarage bids- "+bids);
+
+                //Thread.Sleep(500);
             }         
         }
 
