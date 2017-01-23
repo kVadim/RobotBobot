@@ -17,8 +17,14 @@ D:\RobotBobot\RobotBobot\bin\Debug\RobotBobot.pdb
 D:\RobotBobot\RobotBobot\bin\Debug\log4net.dll
 D:\RobotBobot\RobotBobot\bin\Debug\Newtonsoft.Json.dll
 D:\RobotBobot\RobotBobot\bin\Debug\log4net.xml
-D:\RobotBobot\RobotBobot\bin\Debug\Newtonsoft.Json.xml
 D:\RobotBobot\RobotBobot\obj\Debug\RobotBobot.csprojResolveAssemblyReference.cache
 D:\RobotBobot\RobotBobot\obj\Debug\RobotBobot.Form1.resources
 D:\RobotBobot\RobotBobot\obj\Debug\RobotBobot.Properties.Resources.resources
 D:\RobotBobot\RobotBobot\obj\Debug\RobotBobot.csproj.GenerateResource.Cache
+D:\RobotBobot\RobotBobot\bin\Debug\phantomjs.exe
+D:\RobotBobot\RobotBobot\bin\Debug\phantomjs-license.txt
+D:\RobotBobot\RobotBobot\bin\Debug\Ionic.Zip.dll
+D:\RobotBobot\RobotBobot\bin\Debug\WebDriver.dll
+D:\RobotBobot\RobotBobot\bin\Debug\WebDriver.Support.dll
+D:\RobotBobot\RobotBobot\bin\Debug\WebDriver.xml
+D:\RobotBobot\RobotBobot\bin\Debug\WebDriver.Support.xml

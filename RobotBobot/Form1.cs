@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,8 @@ namespace RobotBobot
 {
     public partial class Form1 : Form
     {
+        
+       
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +51,7 @@ namespace RobotBobot
 
         private void backgroundWorker1_DoWork_1(object sender, DoWorkEventArgs e)
         {
+            GUI.GetDataGUI();
             BackgroundWorker worker = sender as BackgroundWorker;
 
             while (true)
@@ -58,7 +63,8 @@ namespace RobotBobot
                 }
                 else
                 {
-                    RestClient.GetData();
+                   // RestClient.GetData();
+                    
                     Thread.Sleep(300);
                     //  worker.ReportProgress(10);
                 }
@@ -83,6 +89,27 @@ namespace RobotBobot
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
+
+        }
+
+       
+    }
+
+    public static class GUI {
+        public static IWebDriver driver;
+        public static IJavaScriptExecutor js;
+     public static void GetDataGUI()
+        {
+
+
+            var chromeDriverService = ChromeDriverService.CreateDefaultService();
+            chromeDriverService.HideCommandPromptWindow = true;
+            driver = new ChromeDriver(chromeDriverService, new ChromeOptions());
+            driver.Navigate().GoToUrl("https://bitcoinwisdom.com/");
+            driver.Manage().Window.Maximize();
+
+            js = (IJavaScriptExecutor)driver;
+
 
         }
     }

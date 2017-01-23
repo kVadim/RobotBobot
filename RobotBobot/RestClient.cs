@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace RobotBobot
 {
@@ -18,7 +15,7 @@ namespace RobotBobot
             StreamReader reader;
             StringBuilder output;
 
-            for (int i =0; i<10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 request = (HttpWebRequest)WebRequest.Create("https://data.btcchina.com/data/orderbook?limit=10");
                 request.Method = "GET";
@@ -36,10 +33,10 @@ namespace RobotBobot
                 RootObject rootObject = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(data);
                 double asks = rootObject.asks.Average(innerList => innerList[0]);
                 double bids = rootObject.bids.Average(innerList => innerList[0]);
-                Logger.Log.Info("Avarage asks- "+asks);
-                Logger.Log.Info("Avarage bids- "+bids);
+                Logger.Log.Info("Avarage asks- " + asks);
+                Logger.Log.Info("Avarage bids- " + bids);
 
-            }         
+            }
         }
 
         public class RootObject
